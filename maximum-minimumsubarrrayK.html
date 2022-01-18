@@ -64,21 +64,21 @@
               <div class="card-header">Python code</div>
               <div class="card-body">
                 <p class="card-text">
-                    <pre>
-                          def maximumsubarrayK(nums, k):
-                            maxx = 0
-                            if (len(nums) < k):
-                              return "invalid"
-                            for i in range(len(nums)-1):
-                                count = 1
-                                summ = 0
-                                for j in range(i, len(nums)):
-                                  if count <= k:
-                                    summ+=nums[j]
-                                    count+=1
-                                    maxx = max(maxx, summ)
-                            return maxx  
-                    </pre>
+<pre>
+      def maximumsubarrayK(nums, k):
+          maxx = 0
+          if (len(nums) < k):
+            return "invalid"
+          for i in range(len(nums)-1):
+              count = 1
+              summ = 0
+              for j in range(i, len(nums)):
+                  if count <= k:
+                  summ+=nums[j]
+                  count+=1
+                  maxx = max(maxx, summ)
+          return maxx  
+</pre>
                   </p>
               </div>
             </div>
