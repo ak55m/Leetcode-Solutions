@@ -65,25 +65,25 @@
               <div class="card-body">
                 <p class="card-text">
 <pre>
-        def breakingRecords(scores):
-              # Write your code here
+  def breakingRecords(scores):
+        # Write your code here
 
-              h_score = scores[0]
-              l_score = scores[0]
+        h_score = scores[0]
+        l_score = scores[0]
 
-              h_count = 0
-              l_count = 0
+        h_count = 0
+        l_count = 0
 
-              for i in range(1, len(scores)):
-                  if h_score < scores[i]:
-                      h_score = scores[i]
-                      h_count += 1
-                      
-                  if l_score > scores[i]:
-                      l_score = scores[i]
-                      l_count += 1
-                      
-              return h_count, l_count 
+        for i in range(1, len(scores)):
+            if h_score < scores[i]:
+                h_score = scores[i]
+                h_count += 1
+
+            if l_score > scores[i]:
+                l_score = scores[i]
+                l_count += 1
+
+        return h_count, l_count 
 </pre>
                     </p>
               </div>
