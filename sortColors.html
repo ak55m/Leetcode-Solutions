@@ -1,1 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Remove Duplicates</title>
 
+
+    
+
+        <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+<div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <strong>Akeem Mohammed</strong>
+      </a>
+    </div>
+  </div>
+    
+</head>
+<body>
+    
+<main class="container py-5">
+  <h1>Remove duplicates</h1>
+
+  <hr class="my-4">
+
+    <div class="col-md-12">
+    <h6 class="text-justify text-danger font-weight-bold">Explanation: </h6>
+    <p class="text-justify">The trick here is to move the 0's to the left and then move the 2's to the right, so that way the 1's stay in the middle. The output would be the sorted colors.</p>
+        <div class="col d-flex justify-content-center">
+            <div class="card text-white bg-danger">
+              <div class="card-header">Python code</div>
+              <div class="card-body">
+                  <p class="card-text">
+<pre>
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        
+        left = 0
+        i = 0
+        right = len(nums)-1
+        
+        while i < right:
+            if nums[i] == 0:
+                nums[i], nums[left] = nums[left], nums[i]
+                left +=1
+                i+= 1
+                
+            elif nums[i] == 2:
+                nums[i], nums[right] = nums[right], nums[left]
+                right -= 1
+                
+            else:
+                i += 1 
+        return    
+</pre>
+                  </p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
+      
+  </body>
+</html>
